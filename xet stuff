@@ -1,0 +1,1117 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "XET FE archive", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionConfigs"})
+local Tab = Window:MakeTab({
+	Name = "FE Body stuff",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "FE Tall",
+	Callback = function()
+        local LocalPlayer = game:GetService("Players").LocalPlayer
+        local Character = LocalPlayer.Character
+        local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+        function rm()
+            for i,v in pairs(Character:GetDescendants()) do
+                if v:IsA("BasePart") then
+                    if v.Name == "Handle" or v.Name == "Head" then
+                        if Character.Head:FindFirstChild("OriginalSize") then
+                            Character.Head.OriginalSize:Destroy()
+                        end
+                    else
+                        for i,cav in pairs(v:GetDescendants()) do
+                            if cav:IsA("Attachment") then
+                                if cav:FindFirstChild("OriginalPosition") then
+                                    cav.OriginalPosition:Destroy()  
+                                end
+                            end
+                        end
+                        v:FindFirstChild("OriginalSize"):Destroy()
+                        if v:FindFirstChild("AvatarPartScaleType") then
+                            v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                        end
+                    end
+                end
+            end
+        end
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+        wait(1)
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+        wait(1)
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+        wait(1)
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+        wait(1)
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("HeadScale"):Destroy()
+        wait(1)
+        print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Small",
+	Callback = function()
+        --Shit ass script made by failedmite57926
+        local LocalPlayer = game:GetService("Players").LocalPlayer
+        local Character = LocalPlayer.Character
+        local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+        local function rm()
+            for i,v in pairs(Character:GetDescendants()) do
+                if v:IsA("BasePart") then
+                    if v.Name ~= "Head" then
+                        for i,cav in pairs(v:GetDescendants()) do
+                            if cav:IsA("Attachment") then
+                                if cav:FindFirstChild("OriginalPosition") then
+                                    cav.OriginalPosition:Destroy()
+                                end
+                            end
+                        end
+                        v:FindFirstChild("OriginalSize"):Destroy()
+                        if v:FindFirstChild("AvatarPartScaleType") then
+                            v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                        end
+                    end
+                end
+            end
+        end
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyTypeScale"):Destroy()
+        wait(0.2)
+
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+        wait(0.2)
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+        wait(0.2)
+        rm()
+        wait(0.5)
+        Humanoid:FindFirstChild("HeadScale"):Destroy()
+        wait(0.2)
+      	print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Big Hat",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/insuretya/BIG-HAT/main/BIG%20HAT',true))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Big Head",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/insuretya/BIG-HEAD-FE/main/BIG%20HEAD%20FE',true))()
+      		print("button pressed")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Layered Clothing",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Small layered deformation",
+	Callback = function()
+        for i,v in next, game:GetService('Players').LocalPlayer.Character:GetDescendants() do
+            if v:IsA('WrapTarget') then
+                v:Destroy()
+                wait(0.5)
+            end
+        end
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Big layered deformation",
+	Callback = function()
+        --made and leaked by antgame11 on v3rm <3
+        waittime = 0.2
+        if game:GetService("Players").LocalPlayer.Character.Head:FindFirstChild("Head") then
+        game:GetService("Players").LocalPlayer.Character.Head.Head:Remove()
+            end
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.LowerTorso.LowerTorso:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.UpperTorso.UpperTorso:Remove()
+        wait(waittime)
+        --hands and arms
+        game:GetService("Players").LocalPlayer.Character.LeftHand.LeftHand:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.RightHand.RightHand:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.RightUpperArm.RightUpperArm:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.LeftUpperArm.LeftUpperArm:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.RightLowerArm.RightLowerArm:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.LeftLowerArm.LeftLowerArm:Remove()
+        wait(waittime)
+        --legs
+        game:GetService("Players").LocalPlayer.Character.RightLowerLeg.RightLowerLeg:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.RightUpperLeg.RightUpperLeg:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.LeftUpperLeg.LeftUpperLeg:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.LeftLowerLeg.LeftLowerLeg:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.LeftFoot.LeftFoot:Remove()
+        wait(waittime)
+        game:GetService("Players").LocalPlayer.Character.RightFoot.RightFoot:Remove()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Remove layered mesh",
+	Callback = function()
+        local Players = game:GetService("Players")
+        local lp = Players.LocalPlayer
+        for i,v in next, lp.Character:GetDescendants() do
+            if v:IsA('SurfaceAppearance') then
+                v:Destroy()
+            end
+        end
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Utilities",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "FE Spam sounds",
+	Callback = function()
+    if game:GetService("SoundService").RespectFilteringEnabled == false then
+        for _, sound in next, workspace:GetDescendants() do
+        if sound:IsA("Sound") then
+            sound:Play()
+        else if game:GetService("SoundService").RespectFilteringEnabled == true then
+            OrionLib:MakeNotification({
+                Name = "This script doesn't works on this game",
+                Content = "This script can't works because the game has RFE enabled.",
+                Image = "rbxassetid://4483345998",
+                Time = 7
+            })
+            end
+        end
+    end
+end
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+    Name = "FE mute sounds",
+	Callback = function()
+    if game:GetService("SoundService").RespectFilteringEnabled == false then
+        for _, sound in next, workspace:GetDescendants() do
+        if sound:IsA("Sound") then
+            sound:Stop()
+        else if game:GetService("SoundService").RespectFilteringEnabled == true then
+            OrionLib:MakeNotification({
+                Name = "This script doesn't works on this game",
+                Content = "This script can't works because the game has RFE enabled.",
+                Image = "rbxassetid://4483345998",
+                Time = 7
+            })
+            end
+        end
+    end
+end
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Respawn on current position",
+	Callback = function()
+        local stationaryrespawn = true -- ca depend les jeux
+        local respawnatpos = true -- primordiale que sa sois true
+        local pos = CFrame.new()
+        local haspos = false
+
+        function StatRespawn(inputObject, gameProcessedEvent)
+            if gameProcessedEvent == false then        
+        stationaryrespawn = not stationaryrespawn
+            end
+        end
+
+        game:GetService("UserInputService").InputBegan:connect(StatRespawn) 
+        game:GetService('RunService').Stepped:connect(function()
+
+        if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+            if haspos == false then
+                pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                haspos = true
+            end
+            needsrespawning = true
+        end
+
+        if needsrespawning == true then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+        end
+        end)
+
+        game.Players.LocalPlayer.CharacterAdded:connect(function()
+        wait(0.6)
+        needsrespawning = false
+        haspos = false
+        end)
+      		print("button pressed")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Animations",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "OG Animation",
+	Callback = function()
+            game.Players.LocalPlayer.Character:BreakJoints()
+            game.Players.LocalPlayer.Character=nil
+            Connection = game.Workspace.DescendantAdded:Connect(function(c)
+                if c.Name == "Animate" then
+                    c.Disabled=true        
+                end
+            end)
+            repeat wait() until game.Players.LocalPlayer.Character
+            Char = game.Players.LocalPlayer.Character
+            Died = game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
+                Connection:Disconnect()
+                Died:Disconnect()
+            end)
+            wait(.1)
+            function waitForChild(parent, childName)
+        local child = parent:findFirstChild(childName)
+        if child then return child end
+        while true do
+        child = parent.ChildAdded:wait()
+        if child.Name==childName then return child end
+        end
+        end
+        local Figure = game.Players.LocalPlayer.Character
+        local Torso = waitForChild(Figure, "Torso", "")
+        local RightShoulder = waitForChild(Torso, "Right Shoulder")
+        local LeftShoulder = waitForChild(Torso, "Left Shoulder")
+        local RightHip = waitForChild(Torso, "Right Hip")
+        local LeftHip = waitForChild(Torso, "Left Hip")
+        local Neck = waitForChild(Torso, "Neck")
+        local Humanoid = waitForChild(Figure, "Humanoid")
+        local pose = "Standing"
+        
+        local toolAnim = "None"
+        local toolAnimTime = 0
+        
+        local jumpMaxLimbVelocity = 0.75
+        
+        -- functions
+        
+        function onRunning(speed)
+        if speed>0 then
+        pose = "Running"
+        else
+        pose = "Standing"
+        end
+        end    
+        function onDied()
+        pose = "Dead"
+        end      
+        function onJumping()
+        pose = "Jumping"
+        end       
+        function onClimbing()
+        pose = "Climbing"
+        end    
+        function onGettingUp()
+        pose = "GettingUp"
+        end     
+        function onFreeFall()
+        pose = "FreeFall"
+        end    
+        function onFallingDown()
+        pose = "FallingDown"
+        end    
+        function onSeated()
+        pose = "Seated"
+         end
+        function onPlatformStanding()
+        pose = "PlatformStanding"
+        end
+        function onSwimming(speed)
+        if speed>0 then
+        pose = "Running"
+        else
+        pose = "Standing"
+        end
+        end 
+        function moveJump()
+        RightShoulder.MaxVelocity = jumpMaxLimbVelocity
+        LeftShoulder.MaxVelocity = jumpMaxLimbVelocity
+        RightShoulder:SetDesiredAngle(3.14)
+        LeftShoulder:SetDesiredAngle(-3.14)
+        RightHip:SetDesiredAngle(0)
+        LeftHip:SetDesiredAngle(0)
+        end 
+        
+        function moveFreeFall()
+        RightShoulder.MaxVelocity = jumpMaxLimbVelocity
+        LeftShoulder.MaxVelocity = jumpMaxLimbVelocity
+        RightShoulder:SetDesiredAngle(3.14)
+        LeftShoulder:SetDesiredAngle(-3.14)
+        RightHip:SetDesiredAngle(0)
+        LeftHip:SetDesiredAngle(0)
+        end
+        
+        function moveSit()
+        RightShoulder.MaxVelocity = 0.15
+        LeftShoulder.MaxVelocity = 0.15
+        RightShoulder:SetDesiredAngle(3.14 /2)
+        LeftShoulder:SetDesiredAngle(-3.14 /2)
+        RightHip:SetDesiredAngle(3.14 /2)
+        LeftHip:SetDesiredAngle(-3.14 /2)
+        end
+        
+        function getTool()
+        for _, kid in ipairs(Figure:GetChildren()) do
+        if kid.className == "Tool" then return kid end
+        end
+        return nil
+        end
+        
+        function getToolAnim(tool)
+        for _, c in ipairs(tool:GetChildren()) do
+        if c.Name == "toolanim" and c.className == "StringValue" then
+        return c
+        end
+        end
+        return nil
+        end
+        
+        function animateTool()
+        
+        if (toolAnim == "None") then
+        RightShoulder:SetDesiredAngle(1.57)
+        return
+        end
+        
+        if (toolAnim == "Slash") then
+        RightShoulder.MaxVelocity = 0.5
+        RightShoulder:SetDesiredAngle(0)
+        return
+        end
+        
+        if (toolAnim == "Lunge") then
+        RightShoulder.MaxVelocity = 0.5
+        LeftShoulder.MaxVelocity = 0.5
+        RightHip.MaxVelocity = 0.5
+        LeftHip.MaxVelocity = 0.5
+        RightShoulder:SetDesiredAngle(1.57)
+        LeftShoulder:SetDesiredAngle(1.0)
+        RightHip:SetDesiredAngle(1.57)
+        LeftHip:SetDesiredAngle(1.0)
+        return
+        end
+        end
+        
+        function move(time)
+        local amplitude
+        local frequency
+        
+        if (pose == "Jumping") then
+        moveJump()
+        return
+        end
+        
+        if (pose == "FreeFall") then
+        moveFreeFall()
+        return
+        end
+        
+        if (pose == "Seated") then
+        moveSit()
+        return
+        end
+        
+        local climbFudge = 0
+        
+        if (pose == "Running") then
+            if (RightShoulder.CurrentAngle > 1.5 or RightShoulder.CurrentAngle < -1.5) then
+        RightShoulder.MaxVelocity = jumpMaxLimbVelocity
+        else  
+        RightShoulder.MaxVelocity = 0.15
+        end
+        if (LeftShoulder.CurrentAngle > 1.5 or LeftShoulder.CurrentAngle < -1.5) then
+        LeftShoulder.MaxVelocity = jumpMaxLimbVelocity
+        else  
+        LeftShoulder.MaxVelocity = 0.15
+        end
+        amplitude = 1
+        frequency = 9
+        elseif (pose == "Climbing") then
+        RightShoulder.MaxVelocity = 0.5
+        LeftShoulder.MaxVelocity = 0.5
+        amplitude = 1
+        frequency = 9
+        climbFudge = 3.14
+        else
+        amplitude = 0.1
+        frequency = 1
+        end
+        
+        desiredAngle = amplitude * math.sin(time*frequency)
+        
+        RightShoulder:SetDesiredAngle(desiredAngle + climbFudge)
+        LeftShoulder:SetDesiredAngle(desiredAngle - climbFudge)
+        RightHip:SetDesiredAngle(-desiredAngle)
+        LeftHip:SetDesiredAngle(-desiredAngle)
+        
+        local tool = getTool()
+        
+        if tool then
+        
+        animStringValueObject = getToolAnim(tool)
+        
+        if animStringValueObject then
+        toolAnim = animStringValueObject.Value
+        animStringValueObject.Parent = nil
+        toolAnimTime = time + .3
+        end
+        
+        if time > toolAnimTime then
+        toolAnimTime = 0
+        toolAnim = "None"
+        end
+        
+        animateTool()
+         
+        else
+        toolAnim = "None"
+        toolAnimTime = 0
+        end
+        end
+        
+        Humanoid.Died:connect(onDied)
+        Humanoid.Running:connect(onRunning)
+        Humanoid.Jumping:connect(onJumping)
+        Humanoid.Climbing:connect(onClimbing)
+        Humanoid.GettingUp:connect(onGettingUp)
+        Humanoid.FreeFalling:connect(onFreeFall)
+        Humanoid.FallingDown:connect(onFallingDown)
+        Humanoid.Seated:connect(onSeated)
+        Humanoid.PlatformStanding:connect(onPlatformStanding)
+        Humanoid.Swimming:connect(onSwimming)
+        
+        local runService = game:service("RunService");
+        
+        while Figure.Parent~=nil do
+        local _, time = wait(0.1)
+        move(time)
+        end
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "R15 and R6 anims",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/RmD3qNp7", true))()
+      		print("button pressed")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Universal stuff",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "R6 Sword Aura",
+	Callback = function()
+        for i,v in next, getconnections(game.Workspace.ChildAdded) do
+            v:Disable()
+         end
+         local Player = game.Players.LocalPlayer
+         local oldnamecall; oldnamecall = hookmetamethod(game, "__namecall", function(self, ...)
+           local args = {...}
+           local method = getnamecallmethod();
+           if (method == "Kick" or method == "kick") and self == Player then
+               return wait(9e9);
+           end
+           return oldnamecall(self, unpack(args))
+         end)
+         
+         local radius = 20 -- Games with decent anti cheat require lowers ones games with non can be as big as you want
+         
+         local players = game:GetService("Players")
+         local plr = players.LocalPlayer
+         local c = Instance.new("Part")
+         c.Shape = "Ball"
+         c.CanCollide = false
+         c.Transparency = 0
+         c.Color = Color3.fromRGB(255, 0, 4)
+         c.Material = Enum.Material.ForceField
+         c.CastShadow = false
+         c.Parent = game.Workspace
+         c.CanQuery = false
+         c.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame
+         c.Size = Vector3.new(radius,radius,radius)
+         c.Touched:Connect(function(hit)
+         if players:GetPlayerFromCharacter(hit.Parent) == game.Players.LocalPlayer then
+         elseif players:GetPlayerFromCharacter(hit.Parent) then
+           if hit.Parent.Humanoid.Health == 0 then    
+         else
+         repeat
+           wait(0.05)
+           game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+           game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool").Handle.Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+         until hit.Parent.Humanoid.Died
+           end
+         end
+         end)
+         game:GetService("RunService").RenderStepped:Connect(function()
+           c.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame
+         end)
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "R15 Sword Aura",
+	Callback = function()
+        for i,v in next, getconnections(game.Workspace.ChildAdded) do
+            v:Disable()
+         end
+         local Player = game.Players.LocalPlayer
+         local oldnamecall; oldnamecall = hookmetamethod(game, "__namecall", function(self, ...)
+           local args = {...}
+           local method = getnamecallmethod();
+           if (method == "Kick" or method == "kick") and self == Player then
+               return wait(9e9);
+           end
+           return oldnamecall(self, unpack(args))
+         end)
+         
+         local radius = 20 -- Games with decent anti cheat require lowers ones games with non can be as big as you want
+         
+         local players = game:GetService("Players")
+         local plr = players.LocalPlayer
+         local c = Instance.new("Part")
+         c.Shape = "Ball"
+         c.CanCollide = false
+         c.Transparency = 0
+         c.Color = Color3.fromRGB(255, 0, 4)
+         c.Material = Enum.Material.ForceField
+         c.CastShadow = false
+         c.Parent = game.Workspace
+         c.CanQuery = false
+         c.CFrame = game.Players.LocalPlayer.Character.UpperTorso.CFrame
+         c.Size = Vector3.new(radius,radius,radius)
+         c.Touched:Connect(function(hit)
+         if players:GetPlayerFromCharacter(hit.Parent) == game.Players.LocalPlayer then
+         elseif players:GetPlayerFromCharacter(hit.Parent) then
+           if hit.Parent.Humanoid.Health == 0 then    
+         else
+         repeat
+           wait(0.05)
+           game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+           game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool").Handle.Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+         until hit.Parent.Humanoid.Died
+           end
+         end
+         end)
+         game:GetService("RunService").RenderStepped:Connect(function()
+           c.CFrame = game.Players.LocalPlayer.Character.UpperTorso.CFrame
+         end)
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Universal Silent Aim",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+
+
+Tab:AddButton({
+    Name = "Universal hitbox expender",
+	Callback = function()
+        --// Exploit Check \--
+        if #{firetouchinterest, fireproximityprompt, hookmetamethod, setupvalue, getgc} ~= 5 then
+            while true do
+            end
+        end
+
+        --// Exploit Fix \--
+        if not pcall(function() return syn.protect_gui end) then
+            syn = {}
+            syn.protect_gui = function(A_1)
+                A_1.Parent = game:GetService("CoreGui")
+            end
+        end
+        if not game:IsLoaded() then game.Loaded:Wait() end
+
+        local lPlayer = game.Players.LocalPlayer
+        -- thanks 3ds and kiko metatables r hard
+        if not getgenv().MTAPIMutex then loadstring(game:HttpGet("https://raw.githubusercontent.com/KikoTheDon/MT-Api-v2/main/__source/mt-api%20v2.lua", true))() end
+
+        if game.PlaceId == 111311599 then -- Critical Strike
+            local anticheat = game:GetService("ReplicatedFirst")["Serverbased AntiCheat"] -- then why put it in a localscript?
+            -- I literally copied the rest of this from the "Serverbased Anticheat"
+            local sValue = game:GetService("Players").LocalPlayer:WaitForChild("SValue")
+            local function constructAnticheatString()
+                return "CS-" .. math.random(11111, 99999) .. "-" .. math.random(1111, 9999) .. "-" .. math.random(111111, 999999) .. math.random(1111111, 9999999) .. (sValue.Value * 6) ^ 2 + 18;
+            end
+            -- to be fair the game hasn't been updated in over a year
+            task.spawn(function()
+                while true do task.wait(2)
+                    game:GetService("ReplicatedStorage").ACDetect:FireServer(sValue.Value, constructAnticheatString());
+                end
+            end)
+            anticheat.Disabled = true
+        end
+
+        local playerNames = {}
+        --local npcNames = {} -- I was planning on adding npc support
+        local teamNames = {}
+
+        -- thanks inori and wally
+        local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/Library.lua'))()
+        local SaveManager = loadstring(game:HttpGet('https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/addons/SaveManager.lua'))()
+        SaveManager:SetLibrary(Library)
+        SaveManager:SetFolder("HitboxExtender")
+        Library:Notify("hai :3")
+        local mainWindow = Library:CreateWindow("Personal object of abuse")
+
+        local mainTab = mainWindow:AddTab("Main")
+        local mainGroupbox = mainTab:AddLeftGroupbox("Hitbox Extender")
+        local ignoresGroupbox = mainTab:AddRightGroupbox("Ignores")
+        local miscGroupbox = mainTab:AddLeftGroupbox("Misc")
+
+        local extenderToggled = mainGroupbox:AddToggle("extenderToggled", {Text = "Toggle"})
+        local extenderSize = mainGroupbox:AddSlider("extenderSize", {Text = "Size", Min = 2, Max = 100, Default = 10, Rounding = 0})
+        local extenderTransparency = mainGroupbox:AddSlider("extenderTransparency", {Text = "Transparency", Min = 0, Max = 1, Default = 0.5, Rounding = 2})
+        -- for some reason the save manager doesn't save inputs, idk how to fix it
+        local customPartNameInput = mainGroupbox:AddInput("customPartList", {Text = "Custom Part Name", Default = "HeadHB"})
+        local extenderPartList = mainGroupbox:AddDropdown("extenderPartList", {Text = "Body Parts", AllowNull = true, Multi = true, Values = {"Custom Part", "Head", "HumanoidRootPart", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg"}, Default = "Head"})
+        local extenderUpdateRate = miscGroupbox:AddSlider("extenderUpdateRate", {Text = "Update Rate", Min = 0, Max = 1000, Default = 0, Rounding = 0, Suffix = "ms"})
+
+        local extenderSitCheck = ignoresGroupbox:AddToggle("extenderSitCheck", {Text = "Ignore Sitting Players"})
+        local ignoreSelectedPlayersToggled = ignoresGroupbox:AddToggle("ignoreSelectedPlayersToggled", {Text = "Ignore Selected Players"})
+        local ignorePlayerList = ignoresGroupbox:AddDropdown("ignorePlayerList", {Text = "Players", AllowNull = true, Multi = true, Values = playerNames})
+        --local ignoreSelectedNpcsToggled = ignoresGroupbox:AddToggle("ignoreSelectedNpcsToggled", {Text = "Ignore Selected Npcs"})
+        --local ignoreNpcList = ignoresGroupbox:AddDropdown("ignoreNpcList", {Text = "Npcs", AllowNull = true, Multi = true, Values = npcNames})
+        local ignoreSelfTeamToggled = ignoresGroupbox:AddToggle("ignoreSelfTeamToggled", {Text = "Ignore Own Team"})
+        local ignoreSelectedTeamsToggled = ignoresGroupbox:AddToggle("ignoreSelectedTeamsToggled", {Text = "Ignore Selected Teams"})
+        local ignoreTeamList = ignoresGroupbox:AddDropdown("ignoreTeamList", {Text = "Teams", AllowNull = true, Multi = true, Values = teamNames})
+
+        -- thanks roblox dev forum
+        local function CheckTableEquality(t1,t2)
+            for i,v in next, t1 do if t2[i]~=v then return false end end
+            for i,v in next, t2 do if t1[i]~=v then return false end end
+            return true
+        end
+
+        -- updates the player list
+        task.spawn(function()
+            while true do task.wait() -- if you cry about while true do loops then kys
+                local temp = {}
+                for i,v in ipairs(game.Players:GetPlayers()) do
+                    if v ~= lPlayer then
+                        temp[i] = v.Name
+                    end
+                end
+                if not CheckTableEquality(playerNames, temp) then
+                    playerNames = temp
+                    ignorePlayerList.Values = temp
+                    ignorePlayerList:SetValues()
+                    ignorePlayerList:Display()
+                end
+            end
+        end)
+
+        -- updates the team list
+        task.spawn(function()
+            while true do task.wait()
+                local temp = {}
+                for i,v in pairs(game.Teams:GetTeams()) do
+                    temp[i] = v.Name
+                end
+                if not CheckTableEquality(teamNames, temp) then
+                    teamNames = temp
+                    ignoreTeamList.Values = temp
+                    ignoreTeamList:SetValues()
+                    ignoreTeamList:Display()
+                end
+            end
+        end)
+
+        --task.spawn(function()
+        --    while true do task.wait()
+        --        local temp = {}
+        --        for i,v in ipairs(npcs) do
+        --            temp[i] = v.Name
+        --        end
+        --        if not CheckTableEquality(npcNames, temp) then
+        --            ignoreNpcList.Values = temp
+        --            ignoreNpcList:SetValues()
+        --            ignoreNpcList:Display()
+        --        end
+        --    end
+        --end)
+
+        SaveManager:BuildConfigSection(mainTab)
+        SaveManager:LoadAutoloadConfig()
+
+        -- Returns a table of every possible bodypart in a character, or nil if the character does not exist.
+        local function getBodyParts(character)
+            local parts = {
+                Head = character:WaitForChild("Head"),
+                HumanoidRootPart = character:WaitForChild("HumanoidRootPart"),
+                Humanoid = character:WaitForChild("Humanoid"),
+                Torso = {},
+                ["Left Arm"] = {},
+                ["Right Arm"] = {},
+                ["Left Leg"] = {},
+                ["Right Leg"] = {}
+            }
+            for _,v in pairs(character:GetChildren()) do
+                if v:IsA("BasePart") and parts.Humanoid:GetLimb(v) ~= Enum.Limb.Unknown then
+                    if string.match(v.Name, "Torso") then
+                        parts.Torso[v.Name] = v
+                        continue
+                    end
+                    if string.match(v.Name, "Left") then
+                        if string.match(v.Name, "Arm") or string.match(v.Name, "Hand") then
+                            parts["Left Arm"][v.Name] = v
+                            continue
+                        end
+                        if string.match(v.Name, "Leg") or string.match(v.Name, "Foot") then
+                            parts["Left Leg"][v.Name] = v
+                            continue
+                        end
+                    end
+                    if string.match(v.Name, "Right") then
+                        if string.match(v.Name, "Arm") or string.match(v.Name, "Hand") then
+                            parts["Right Arm"][v.Name] = v
+                            continue
+                        end
+                        if string.match(v.Name, "Leg") or string.match(v.Name, "Foot") then
+                            parts["Right Leg"][v.Name] = v
+                            continue
+                        end
+                    end
+                end
+            end
+            return parts
+        end
+
+        -- Main function that allows the character passed to be expanded at will
+        local function extendCharacter(character)
+            local player = game.Players:GetPlayerFromCharacter(character)
+            local timer = 0
+            local originals = {}
+            local collisions = {}
+            local CharacterAdded = {}
+            local bodyParts = getBodyParts(character)
+            --Sets up original sizes, creates collision constraints, and creates hooks to bypass localscript anticheats
+            local function setup(i, v)
+                if not originals[i] then
+                    originals[i] = {}
+                    originals[i].Size = v.Size
+                    originals[i].Transparency = v.Transparency
+                    originals[i].CanCollide = v.CanCollide
+                    originals[i].Massless = v.Massless
+                    local sizeHook = v:AddGetHook("Size", originals[i].Size)
+                    local transparencyHook = v:AddGetHook("Transparency", originals[i].Transparency)
+                    local canCollideHook = v:AddGetHook("CanCollide", originals[i].CanCollide)
+                    local masslessHook = v:AddGetHook("Massless", originals[i].Massless)
+                    v:AddSetHook("Size", function(self, value)
+                        originals[i].Size = value
+                        sizeHook:Modify("Size", value)
+                        return value
+                    end)
+                    v:AddSetHook("Transparency", function(self, value)
+                        originals[i].Transparency = value
+                        transparencyHook:Modify("Transparency", value)
+                        return value
+                    end)
+                    v:AddSetHook("CanCollide", function(self, value)
+                        originals[i].CanCollide = value
+                        canCollideHook:Modify("CanCollide", value)
+                        return value
+                    end)
+                    v:AddSetHook("Massless", function(self, value)
+                        originals[i].Massless = value
+                        masslessHook:Modify("Massless", value)
+                        return value
+                    end)
+                end
+                if not collisions[i] then
+                    collisions[i] = {}
+                    -- thanks to GameGuy#5286 for telling me collision constraints exist
+                    for o,b in pairs(getBodyParts(lPlayer.Character)) do
+                        if o ~= "Humanoid" and type(b) ~= "table" then
+                            collisions[i][o] = Instance.new("NoCollisionConstraint", v)
+                            collisions[i][o].Enabled = false
+                            collisions[i][o].Part0 = v
+                            collisions[i][o].Part1 = b
+                            CharacterAdded[i] = lPlayer.CharacterAdded:Connect(function(char)
+                                local temp = char:WaitForChild(o)
+                                collisions[i][o].Part1 = temp
+                            end)
+                        elseif type(b) == "table" then
+                            for g,z in pairs(b) do
+                                if z:IsA("BasePart") then
+                                    collisions[i][g] = Instance.new("NoCollisionConstraint", v)
+                                    collisions[i][g].Enabled = false
+                                    collisions[i][g].Part0 = v
+                                    collisions[i][g].Part1 = z
+                                    CharacterAdded[i] = lPlayer.CharacterAdded:Connect(function(char)
+                                        local temp = char:WaitForChild(g)
+                                        if temp:IsA("BasePart") then
+                                            collisions[i][g].Part1 = temp
+                                        end
+                                    end)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            do
+                local customPart = character:FindFirstChild(customPartNameInput.Value)
+                if customPart and customPart:IsA("BasePart") then
+                    if not originals[customPart.Name] then
+                        setup(customPart.Name, customPart)
+                    end
+                end
+                for i,v in pairs(bodyParts) do
+                    if i ~= "Humanoid" and type(v) ~= "table" then
+                        if not originals[i] then
+                            setup(i,v)
+                        end
+                    elseif type(v) == "table" then
+                        for o,b in pairs(v) do
+                            if not originals[o] then
+                                setup(o,b)
+                            end
+                        end
+                    end
+                end
+            end
+            -- resets the properties of the selected part.
+            -- if "all" is passed, will reset every part
+            local function reset(part)
+                if part == "custompart" or part == "all" then
+                    local customPart = character:FindFirstChild(customPartNameInput.Value)
+                    if customPart and customPart:IsA("BasePart") then
+                        customPart.Size = originals[customPart.Name].Size
+                        customPart.Transparency = originals[customPart.Name].Transparency
+                        customPart.CanCollide = originals[customPart.Name].CanCollide
+                        customPart.Massless = originals[customPart.Name].Massless
+                    end
+                end
+                for i,v in pairs(bodyParts) do
+                    if string.lower(part) == string.lower(i) or part == "all" then
+                        if i ~= "Humanoid" and type(v) ~= "table" then
+                            v.Size = originals[i].Size
+                            v.Transparency = originals[i].Transparency
+                            v.CanCollide = originals[i].CanCollide
+                            v.Massless = originals[i].Massless
+                        elseif type(v) == "table" then
+                            for o,b in pairs(v) do
+                                b.Size = originals[o].Size
+                                b.Transparency = originals[o].Transparency
+                                b.Massless = originals[o].Massless
+                                for _,z in pairs(collisions[o]) do
+                                    if z.Enabled == true and z.Part0 == b then
+                                        z.Enabled = false
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            local function getChecks()
+                if bodyParts.Humanoid:GetState() == Enum.HumanoidStateType.Dead then
+                    return 2
+                end
+                if extenderSitCheck.Value then
+                    if bodyParts.Humanoid.Sit then
+                        return 1
+                    end
+                end
+                if ignoreSelfTeamToggled.Value then
+                    if game.PlaceId == 2039118386 then -- Neighborhood War
+                        local selfTeam
+                        local playerTeam
+                        pcall(function()
+                            selfTeam = lPlayer.Character.HumanoidRootPart.BrickColor
+                            playerTeam = bodyParts.HumanoidRootPart.BrickColor
+                        end)
+                        if selfTeam == playerTeam then
+                            return 1
+                        end
+                    else
+                        if lPlayer.Team == player.Team then
+                            return 1
+                        end
+                    end
+                end
+                if ignoreSelectedTeamsToggled.Value then
+                    local teamList = ignoreTeamList:GetActiveValues()
+                    if table.find(teamList, tostring(player.Team)) then
+                        return 1
+                    end
+                end
+                if ignoreSelectedPlayersToggled.Value then
+                    local playerList = ignorePlayerList:GetActiveValues()
+                    if table.find(playerList, tostring(player.Name)) then
+                        return 1
+                    end
+                end
+                return 0
+            end
+            -- here's the actual expander code
+            local Heartbeat
+            Heartbeat = game:GetService("RunService").Heartbeat:Connect(function(deltaTime)
+                timer += deltaTime
+                if timer >= (extenderUpdateRate.Value / 100) then -- divided by 100 because milliseconds
+                    timer = 0
+                    local bodyPartList = extenderPartList:GetActiveValues()
+                    local checks = getChecks()
+                    if checks == 2 then
+                        reset("all")
+                        for _,v in pairs(CharacterAdded) do
+                            v:Disconnect()
+                        end
+                        Heartbeat:Disconnect()
+                        return
+                    elseif checks == 1 then
+                        reset("all")
+                        return
+                    end
+                    if extenderToggled.Value then
+                        if table.find(bodyPartList, "Custom Part") then
+                            local customPart = character:FindFirstChild(customPartNameInput.Value)
+                            if customPart then
+                                customPart.Size = Vector3.new(extenderSize.Value, extenderSize.Value, extenderSize.Value)
+                                customPart.Transparency = extenderTransparency.Value
+                                customPart.CanCollide = false
+                                customPart.Massless = true
+                            end
+                        else
+                            reset("custompart")
+                        end
+                        for i,v in pairs(bodyParts) do
+                            if table.find(bodyPartList, i) then
+                                if type(v) ~= "table" then
+                                    if i ~= "HumanoidRootPart" then
+                                        v.Massless = true
+                                    end
+                                    v.Size = Vector3.new(extenderSize.Value, extenderSize.Value, extenderSize.Value)
+                                    v.Transparency = extenderTransparency.Value
+                                    v.CanCollide = false
+                                else
+                                    for o,b in pairs(v) do
+                                        b.Massless = true
+                                        b.Size = Vector3.new(extenderSize.Value, extenderSize.Value, extenderSize.Value)
+                                        b.Transparency = extenderTransparency.Value
+                                        for _,z in pairs(collisions[o]) do
+                                            if z.Enabled == false and z.Part0 == b then
+                                                z.Enabled = true
+                                            end
+                                        end
+                                    end
+                                end
+                            else
+                                reset(i)
+                            end
+                        end
+                    else
+                        reset("all")
+                    end
+                end
+            end)
+            local PlayerRemoving
+            PlayerRemoving = game.Players.PlayerRemoving:Connect(function(v)
+                if v == player then
+                    Heartbeat:Disconnect()
+                    PlayerRemoving:Disconnect()
+                end
+            end)
+        end
+        for _,player in ipairs(game.Players:GetPlayers()) do
+            if player ~= lPlayer then
+                task.spawn(function()
+                    if player.Character then
+                        extendCharacter(player.Character)
+                    end
+                    player.CharacterAdded:Connect(function(v)
+                        extendCharacter(v)
+                    end)
+                end)
+            end
+        end
+        game.Players.PlayerAdded:Connect(function(player)
+            player.CharacterAdded:Connect(function(v)
+                extendCharacter(v)
+            end)
+        end)
+-- now, where are my schizo meds?
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Universal car editor",
+	Callback = function()
+        _G.Credits = "discord.gg/rips"
+        _G.RedGUI = false
+        _G.Theme = "Dark"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/UniversalVehicleGUI.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Games",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
